@@ -13,10 +13,27 @@ h3{
 }
 
 .odstavec{
-  padding: 55px;
-  border-top: solid 1px rgb(207, 205, 205) ;
-  border-bottom: solid 1px rgb(207, 205, 205) ;
+  padding: 35px;
+  border-top: solid 1px rgb(228, 228, 228) ;
+  border-bottom: solid 1px rgb(228, 228, 228);
   font-family: 'Segoe UI', Tahoma, Helvetica, sans-serif;
   font-size: 25px;
   color: rgb(91, 87, 87);
+}
+
+main{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.popis{
+  margin:0 90px;
+}
+
+.pozicia{
+  text-transform: uppercase;
+  color: rgb(91, 87, 87) ;
+  font-family: Arial, Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 20px;
 }
