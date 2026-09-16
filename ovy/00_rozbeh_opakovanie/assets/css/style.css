@@ -11,3 +11,12 @@ h3{
   color: coral;
 
 }
+
+.odstavec{
+  padding: 55px;
+  border-top: solid 1px rgb(207, 205, 205) ;
+  border-bottom: solid 1px rgb(207, 205, 205) ;
+  font-family: 'Segoe UI', Tahoma, Helvetica, sans-serif;
+  font-size: 25px;
+  color: rgb(91, 87, 87);
+}
