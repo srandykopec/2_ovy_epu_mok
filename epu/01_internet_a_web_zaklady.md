@@ -57,6 +57,13 @@ Klient (prehliadač)  ──Požiadavka (Request)──▶  Server
 Klient (prehliadač)  ◀──Odpoveď (Response)────  Server
 ```
 
+**Klient** (Vy / Váš prehliadač Edge, Safari, Chrome...) Keď do adresného riadka napíšeme www.google.sk, klient vytvorí **požiadavku**: "Prosím, ukáž mi hlavnú stránku Google." Túto požiadavku pošle cez internet serveru.
+
+**Server** (Vzdialený výkonný počítač): Server čaká na požiadavky. Keď mu príde tá naša, spracuje ju, nájde vo svojej pamäti súbory pre stránku Google (kód, obrázky, texty) a pošle ich späť ako **odpoveď**.
+
+**Výsledok:** Váš prehliadač (klient) tieto súbory prečíta a poskladá z nich webovú stránku, ktorú vidíte na obrazovke.
+
+
 ### Čo je HTTP a HTTPS?
 
 **HTTP** (HyperText Transfer Protocol) = dohodnutý spôsob, akým si prehliadač a server vymieňajú webový obsah.
@@ -109,6 +116,34 @@ Služba **prenájmu priestoru a výkonu** na serveri. Predtým, než si vyberie�
 - Obsah sa mení zriedka
 - Všetci vidia to isté
 - Netreba prihlásenie ani ukladanie dát od používateľov
+
+Na základe toho sa vývoj webových stránok delí na **frontend** a **backend**.
+
+
+#### 🎨 Frontend (klientská strana)
+
+**Čo to je?**
+- Všetko, čo užívateľ **vidí a s čím interaguje** v prehliadači
+- "Predná časť" stránky
+- Beží na počítači užívateľa
+
+**Jazyky frontendu:**
+- **HTML** – štruktúra (nadpisy, odstavce, obrázky)
+- **CSS** – vizuálny dizajn (farby, veľkosti, pozície)
+- **JavaScript** – interaktivita (menu, tlačidlá, animácie)
+
+#### ⚙️ Backend (serverová strana)
+
+**Čo to je?**
+- Všetko, čo sa deje **na serveri** (počítač, kde je stránka uložená)
+- Spracováva dáta, komunikuje s databázou
+- Užívateľ to nevidí priamo
+
+**Jazyky backendu:**
+- **PHP**
+- **Python** (Django, Flask)
+- **Node.js** (JavaScript na serveri!)
+- **Ruby** (Ruby on Rails)
 
 ### 3️⃣ Doména
 **Doména** = zapamätateľná adresa tvojho webu (napr. `mojaskola.sk`). Bez nej by si si musel pamätať číselnú IP adresu ako `185.25.116.47`.
