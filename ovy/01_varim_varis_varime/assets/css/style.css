@@ -70,4 +70,25 @@ img{
   padding-bottom: 20px;
 }
 
+.priprava{
+  background-color: var(--rose-50);
+  border-radius: 10px;
+  padding: 15px;
+}
 
+.priprava__h2{
+  padding-left: 20px;
+}
+
+table{
+  width: 100%;
+}
+
+td{
+  padding: 10px;
+  border-bottom: 1px solid var(--stone-100);
+}
+/*  nefunguje
+tr:last-child{
+  border: none;
+} */
