@@ -23,3 +23,10 @@ h1{
   font-family: "Young Serif", sans-serif;
 }
 
+main{
+  background-color: var(--biela);
+  margin: 0 auto;
+  width: 1000px;
+  border-radius: 25px;
+  padding: 30px;
+}
