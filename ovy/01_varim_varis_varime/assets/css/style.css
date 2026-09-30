@@ -17,16 +17,57 @@
 body{
   font-family: "Outfit", sans-serif;
   background-color: var(--stone-100);
+  color: var(--stone-600);
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 500;
 }
+
+/*
+----------------
+---TYPOGRAFIA---
+----------------
+*/
+
 
 h1{
   font-family: "Young Serif", sans-serif;
+  letter-spacing: .5px;
+  font-weight: 500;
+  font-size: 35px;
+  color: var(--stone-900);
 }
+
+h2{
+  color: var(--brown-00);
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+}
+
+.priprava__h2{
+  color: var(--rose-800);
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+}
+
+.tabulka_strong{
+  color: var(--brown-00);
+}
+
 
 main{
   background-color: var(--biela);
   margin: 0 auto;
-  width: 1000px;
+  width: 900px;
   border-radius: 25px;
-  padding: 30px;
+  padding: 40px;
 }
+
+img{
+  width: inherit; /*zdedí vlastnost po svojom rodičovi*/
+  border-radius: inherit;
+  padding-bottom: 20px;
+}
+
+
