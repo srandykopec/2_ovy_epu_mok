@@ -23,7 +23,7 @@ Nahrádza súbory typu `projekt_final2_NAOZAJ_posledny.html`.
 - **Commit** – uložená snímka projektu s krátkou správou (ako uloženie pozície v hre). Dobrá správa: *„Pridané menu na úvodnú stránku"*, zlá: *„zmeny"*.
 - **Hash** – unikátny 40-znakový identifikátor každého commitu, napr. `a3f5c9e2b7d1…`. Nikdy sa neopakuje, v praxi stačí prvých 7 znakov (`a3f5c9e`).
 - **Push** – pošle commity z počítača **na GitHub**.
-- **Pull** – stiahne zmeny **z GitHubu** do počítača.
+- **Pull** – stiahne aktuálne zmeny **z GitHubu** do počítača.
 
 > ⚠️ **Commit ≠ Push.** Commit uloží zmenu len u teba (bez internetu). Kým neurobíš push, nikto iný ju nevidí.
 
@@ -33,7 +33,7 @@ Nahrádza súbory typu `projekt_final2_NAOZAJ_posledny.html`.
 
 Na GitHube je **jeden spoločný repozitár**, každý má svoju kópiu na počítači.
 
-**Postup:** `pull` → práca → `commit` → `push`
+**Postup:** `pull` → písanie kódu → `commit` → `push`
 
 > 🔑 Vždy najprv **`git pull`**, až potom pracuj.
 
@@ -46,4 +46,4 @@ Na GitHube je **jeden spoločný repozitár**, každý má svoju kópiu na poč�
 1. Aký je rozdiel medzi Gitom a GitHubom?
 2. Prečo po `commit` zmeny ešte nevidia spolužiaci?
 3. Na čo slúži hash?
-4. Napíš príkazy, ktorými uložíš zmeny a pošleš ich na GitHub.
+
