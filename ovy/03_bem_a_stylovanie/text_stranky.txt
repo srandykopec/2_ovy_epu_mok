@@ -1,0 +1,40 @@
+Jana Kováčová
+
+Web Developer & Dizajnérka
+
+Tvorím moderné a užívateľsky prívetivé webové stránky
+
+Domov | Služby | Projekty | Kontakt
+
+Vitajte na mojej stránke!
+
+Som začínajúca web developerka s vášňou pre čistý dizajn a kvalitný kód. Špecializujem sa na tvorbu responzívnych webových stránok pomocou HTML a CSS.
+
+Moje zručnosti
+
+Technológia – Úroveň – Skúsenosti
+
+HTML – Pokročilá – 2 roky
+
+CSS – Pokročilá – 2 roky
+
+JavaScript – Stredná – 1 rok
+
+Figma – Začiatočník – 6 mesiacov
+
+Realizované projekty
+- E-shop s oblečením – responzívna stránka s produktovými kartami
+- Blog o cestovaní – viacstránkový web s galériu fotiek
+- Portfólio fotografa – minimalistický dizajn s dôrazom na obrázky
+- Firemná prezentácia – profesionálna stránka pre malú firmu
+Kontaktujte ma
+
+Email: jana.kovacova@email.sk
+
+Telefón: +421 900 123 456
+
+LinkedIn: linkedin.com/in/janakovacova
+
+GitHub: github.com/janakovacova
+
+© 2026 Jana Kováčová | Vytvorené s ❤️ pomocou HTML a CSS
