@@ -111,6 +111,9 @@ img {
 
 ## 💪 Flexbox – jeden smer (riadok alebo stĺpec)
 
+  
+[Poster FLEXBOX](https://github.com/srandykopec/2_ovy_epu_mok/blob/ab476e3fd7cdf4665a3543d5ce204085316e301d/epu/03_css-flexbox-poster.png)
+
 ### 🔹 Tri pojmy
 
 - **Flex kontajner** – rodič s `display: flex`
@@ -162,6 +165,8 @@ img {
 ---
 
 ## 🎨 Grid – mriežka (riadky aj stĺpce)
+
+[Poster GRID](https://github.com/srandykopec/2epu_2ovy_gdm_voz_25-26/blob/2c05df5cf50267b9cf66b4d1f5693fd8dd0d5ce3/EPU/02_css-grid-poster.png)
 
 ### 🧩 Grid v 3 krokoch
 
