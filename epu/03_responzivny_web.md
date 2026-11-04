@@ -1,8 +1,5 @@
 # 🌐 Responzívny web – poznámky
 
-> 📘 Skupina 2EPU/OVY · Verzia 2
-> 🔎 **Potrebuješ:** HTML základy (štruktúra, odkazy, obrázky) a CSS základy (selektory, farby, `padding`, `margin`).
-
 ---
 
 ## 🗺️ Obsah
@@ -66,16 +63,16 @@ Pridaj do `<head>` **každej** stránky ako **prvý**:
 ### 🧩 Pravidlo pre písmo a medzery
 
 ```css
-html {
-  font-size: 100%;   /* zachová nastavenie prehliadača (zvyčajne 16px) */
-}
+
 
 h1 {
-  font-size: 2rem;   /* 2 × základ */
+  font-size: 2rem;   /* 2 × veľkosť fontu nastavená v prehliadači */
 }
 ```
 
 👵 Ak používateľ zväčší písmo v prehliadači, všetky hodnoty v `rem` sa zväčšia.
+
+---
 
 ## 📦 Kontajner: `max-width`
 
@@ -184,6 +181,8 @@ img {
 
 ### ✨ Jednotka `fr`
 
+Je podiel z dostupného voľného priestoru v kontajneri (krabici).
+
 - `1fr 1fr 1fr` = 3 rovnaké stĺpce
 - `repeat(3, 1fr)` = alternatíva k `1fr 1fr 1fr`
 - `1fr 2fr 1fr` = stredný je 2× širší
@@ -205,10 +204,14 @@ img {
 
 ## 🔀 Flexbox alebo Grid?
 
-| Situácia | Nástroj |
-| --- | --- |
-| Menu, tlačidlá, hlavička | 💪 Flexbox |
-| Galéria, karty produktov | 🎨 Grid |
+| # | Situácia | Nástroj | Prečo |
+| --- | --- | --- | --- |
+| 1 | 🧭 Menu s odkazmi vedľa seba | 💪 Flexbox | Prvky idú v jednom riadku a ich šírka závisí od textu |
+| 2 | 🖼️ Galéria 12 fotiek v 4 stĺpcoch | 🎨 Grid | Riadky aj stĺpce majú rovnaké políčka |
+| 3 | 🔘 Tlačidlá vedľa seba | 💪 Flexbox | Jeden smer a zarovnanie na stred |
+| 4 | 🏷️ Hlavička (logo vľavo, menu vpravo) | 💪 Flexbox | `justify-content: space-between` |
+| 5 | 🛍️ Karty produktov v mriežke | 🎨 Grid | Každá karta má rovnaké miesto v mriežke |
+
 
 ---
 
@@ -250,9 +253,31 @@ img {
 
 ## 📏 Breakpointy
 
-- **Breakpoint** = šírka, pri ktorej sa layout zmení 💡
+- **Breakpoint** = šírka, pri ktorej sa rozloženie prvkov na stránke (layout) zmení 💡
 - `768px` a `1024px` sú **štartovací body**, nie pravidlo
 - Postup: zväčšuj okno a sleduj, **kedy sa obsah rozbije**. Vtedy pridaj breakpoint.
+
+Príklad:
+```css
+/* 📱 Mobil – základ, bez media query */
+.produkty {
+  grid-template-columns: 1fr;
+}
+
+/* 📱➜💻 Tablet – od 768px */
+@media (min-width: 768px) {
+  .produkty {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 🖥️ Desktop – od 1024px */
+@media (min-width: 1024px) {
+  .produkty {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+```
 
 ---
 
@@ -260,7 +285,7 @@ img {
 
 ## 🧪 Ako testovať
 
-1. 🛠️ **F12** → **Toggle device toolbar** (Ctrl + Shift + M)
+1. 🛠️ **F12** → **Toggle device toolbar** 
 2. 📱 Vyber zariadenie alebo zadaj šírku
 3. ↔️ Pomaly zväčšuj a zmenšuj okno
 4. 👀 Skontroluj, že **nie je vodorovný scroll**
@@ -277,22 +302,15 @@ img {
 ## ✅ Kontrolný zoznam
 
 - [ ] 🏷️ Viewport meta tag je v každej stránke
-- [ ] 📦 Kontajner má `max-width`
+- [ ] 📦 Kontajner (krabica) má `max-width`
 - [ ] 🖼️ Obrázky majú `max-width: 100%`
 - [ ] 💪 Flexbox pre jeden smer, 🎨 Grid pre mriežku
 - [ ] 📱 Media queries sú mobile first
 - [ ] 👀 Na žiadnej šírke nie je vodorovný scroll
 
-## 🧠 Úlohy
-
-1. 🔍 **Čo sa stane, ak…?** Zmeň `minmax(250px, 1fr)` na `minmax(400px, 1fr)`. Koľko stĺpcov uvidíš na 1000px?
-2. 🛠️ **Oprava:** Kontajner má `width: 960px`. Oprav ho, aby nebol scroll na mobile.
-3. 🧭 **Navigácia:** Pod 768px pod sebou, od 768px vedľa seba. Napíš CSS mobile first.
-4. 🖼️ **Galéria:** 6 obrázkov – 1 stĺpec na mobile, 2 na tablete, 3 na desktope.
-
 ---
 
-# 🧰 Príloha – Nad rámec (pre rýchlejších)
+# 🧰 Príloha – Nad rámec 
 
 > Tieto témy nie sú povinné. Použi ich, keď základy zvládaš.
 
