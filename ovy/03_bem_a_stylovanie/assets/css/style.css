@@ -1,0 +1,49 @@
+:root{
+  --tmavo-modra: #32465A;
+  --svetlo-modra:#3498DB;
+  --cervena: #E74C3C;
+  --biela: #ffffff;
+  --seda: #AFB9B1;
+
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sirka_boxu{
+  max-width: 800px ;
+  margin: 0 auto;
+}
+
+header{
+  background-color: var(--tmavo-modra);
+  padding: 50px;
+  border-bottom: 5px solid var(--cervena);
+  text-align: center;
+}
+
+h1{
+  font-size: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--biela);
+  text-transform: uppercase;
+  }
+
+
+.header__h2{
+  color: var(--svetlo-modra);
+  font-size: 25px;
+}
+
+.header__p{
+  font-style: italic;
+  color: var(--seda);
+}
+
+
+BLOK
+
+ELEMENT
+
+MODIFIKÁTOR
