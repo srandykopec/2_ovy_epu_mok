@@ -351,19 +351,3 @@ h1 {
 }
 ```
 💡 Media query reaguje na **okno**, container query na **rodiča**.
-
-### 🐢 Redukovaný pohyb
-```css
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-```
-
----
-
-## 🔗 Kde sa responzívnosť rieši v projekte
-
-🎨 **Figma** (frame pre mobil a desktop) → 🧱 **HTML** (viewport) → 🎨 **CSS** (jednotky, Flexbox, Grid, media queries) → 🌿 **Git** (commit po každom kroku) → 🚀 **nasadenie**

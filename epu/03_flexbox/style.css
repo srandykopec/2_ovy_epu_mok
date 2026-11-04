@@ -1,0 +1,302 @@
+/* ===================================== */
+/* ZÁKLADNÉ ŠTÝLY - NEMEŇ ICH */
+/* ===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.hlavicka {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.hlavicka h1 {
+    margin-bottom: 10px;
+}
+
+.paticka {
+    background-color: #27ae60;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.sekcia {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.uvod {
+    background-color: #e8f4f8;
+    border-left: 5px solid #3498db;
+}
+
+.vysvetlenie-blok {
+    background-color: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 2px solid #bdc3c7;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.vysvetlenie-blok h3 {
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.vysvetlenie-blok ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.vysvetlenie-blok li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #34495e;
+    margin: 20px 0 10px;
+    font-size: 16px;
+}
+
+.instrukcia {
+    background-color: #e8f4f8;
+    padding: 15px;
+    border-left: 5px solid #3498db;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+code {
+    background-color: #ecf0f1;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #c0392b;
+}
+
+.tip {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-left: 5px solid #ffc107;
+    margin-top: 20px;
+    border-radius: 4px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Štýly pre kontajnery */
+[class^="kontajner-"] {
+    border: 3px dashed #95a5a6;
+    padding: 20px;
+    background-color: #ecf0f1;
+    margin: 15px 0;
+    min-height: 120px;
+}
+
+/* Pre cvičenie 4 - vyššie kontajnery */
+.kontajner-4a,
+.kontajner-4b,
+.kontajner-4c,
+.kontajner-4d {
+    min-height: 200px;
+}
+
+/* Pre cvičenie 5 - užší kontajner */
+.kontajner-5a,
+.kontajner-5b {
+    max-width: 500px;
+}
+
+/* Pre cvičenie 6 - užší kontajner */
+.kontajner-6a,
+.kontajner-6b,
+.kontajner-6c {
+    max-width: 400px;
+}
+
+/* Štýly pre boxy */
+.box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.box-1 { background-color: #e74c3c; }
+.box-2 { background-color: #3498db; }
+.box-3 { background-color: #2ecc71; }
+.box-4 { background-color: #f39c12; }
+.box-5 { background-color: #9b59b6; }
+.box-6 { background-color: #1abc9c; }
+
+
+/* ===================================== */
+/* TU PRACUJ - DOPLŇ FLEX VLASTNOSTI */
+/* ===================================== */
+
+
+/* ===================================== */
+/* CVIČENIE 1: Display Flex */
+/* Cieľ: Tri navigačné tlačidlá vedľa seba */
+/* ===================================== */
+
+.kontajner-1 {
+    /* Ako dať prvky vedľa seba v jednom riadku? */
+    
+}
+
+
+/* ===================================== */
+/* CVIČENIE 2:*/
+/* Cieľ: Ovládať smer usporiadania */
+/* ===================================== */
+
+.kontajner-2a {
+    /* Horizontálne menu - položky v riadku zľava doprava */
+    
+}
+
+.kontajner-2b {
+    /* Vertikálny zoznam - položky pod sebou */
+    
+}
+
+.kontajner-2c {
+    /* Breadcrumbs - položky z pravej strany */
+    
+}
+
+
+/* ===================================== */
+/* CVIČENIE 3: */
+/* Cieľ: Ovládať vodorovnú pozíciu prvkov */
+/* ===================================== */
+
+.kontajner-3a {
+    /* Logo a menu zarovnané vľavo */
+    
+}
+
+.kontajner-3b {
+    /* Tlačidlá zarovnané vpravo */
+    
+}
+
+.kontajner-3c {
+    /* Obsah vycentrovaný v strede */
+    
+}
+
+.kontajner-3d {
+    /* Logo vľavo, tlačidlá vpravo (typická hlavička) */
+    
+}
+
+.kontajner-3e {
+    /* Tri tlačidlá s rovnakými medzerami okolo */
+    
+}
+
+
+/* ===================================== */
+/* CVIČENIE 4: */
+/* Cieľ: Ovládať vertikálnu pozíciu prvkov */
+/* ===================================== */
+
+.kontajner-4a {
+    /* Navigácia zarovnaná nahor */
+    
+}
+
+.kontajner-4b {
+    /* Tlačidlá pri spodku bannera */
+    
+}
+
+.kontajner-4c {
+    /* Tlačidlá vertikálne vycentrované (klasika!) */
+    
+}
+
+.kontajner-4d {
+    /* Všetky karty rovnako vysoké (roztiahnuté) */
+    
+}
+
+
+/* ===================================== */
+/* CVIČENIE 5:  */
+/* Cieľ: Responzívna galéria produktov */
+/* ===================================== */
+
+.kontajner-5a {
+    /* Všetky produkty v jednom riadku (ak sa nezmestia, pretečú) */
+    
+}
+
+.kontajner-5b {
+    /* Galéria s automatickým zalomením (responzívna!) */
+    
+}
+
+
+/* ===================================== */
+/* CVIČENIE 6:  */
+/* Cieľ: Profesionálne medzery medzi kartami */
+/* ===================================== */
+
+.kontajner-6a {
+    /* Karty produktov bez medzier */
+    
+}
+
+.kontajner-6b {
+    /* Karty s rovnakými medzerami (20px) */
+    
+}
+
+.kontajner-6c {
+    /* Galéria s väčším riadkovaním, menšími stĺpcami */
+   
+    
+}

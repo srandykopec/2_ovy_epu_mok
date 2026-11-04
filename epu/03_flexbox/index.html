@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Postupné cvičenia</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    
+    <header class="hlavicka">
+        <h1>🎯 Flexbox - Základy layoutu</h1>
+        <p>Nauč sa vytvárať moderné rozloženia webových stránok</p>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- ÚVOD -->
+    <!-- ============================================ -->
+    <section class="sekcia uvod">
+        <h2>📘 Čo je display a prečo potrebujeme flex?</h2>
+        
+        <div class="vysvetlenie-blok">
+            <h3>Display - Ako sa prvky zobrazujú</h3>
+            <p>Každý HTML element má vlastnosť <code>display</code>, ktorá určuje, ako sa prvok zobrazí na stránke.</p>
+            
+            <p><strong>Najčastejšie hodnoty:</strong></p>
+            <ul>
+                <li><code>display: block;</code> - Prvok zaberá celú šírku (napr. &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;)</li>
+                <li><code>display: inline;</code> - Prvok je len taký široký, ako jeho obsah (napr. &lt;span&gt;, &lt;a&gt;)</li>
+                <li><code>display: flex;</code> - <strong>Flexbox režim</strong> - moderný spôsob vytvárania layoutov</li>
+            </ul>
+        </div>
+
+        <div class="vysvetlenie-blok">
+            <h3>Prečo Flexbox?</h3>
+            <p>Pred flexboxom bolo ťažké vytvoriť jednoduché veci ako:</p>
+            <ul>
+                <li>✅ Tri tlačidlá vedľa seba s rovnakými medzerami</li>
+                <li>✅ Obsah vertikálne vycentrovaný</li>
+                <li>✅ Navigačné menu s rovnakým rozložením</li>
+                <li>✅ Responzívne galérie, ktoré sa prispôsobia obrazovke</li>
+            </ul>
+            <p><strong>Flexbox to všetko rieši jednoducho!</strong> 🎉</p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CVIČENIE 1: Display Flex -->
+    <!-- ============================================ -->
+    <section class="sekcia">
+        <h2>Cvičenie 1: Navigačné tlačidlá</h2>
+        <p class="instrukcia">
+            <strong>Cieľ:</strong> Tri tlačidlá navigácie chceme zobraziť vedľa seba v jednom riadku.
+        </p>
+        
+        <div class="kontajner-1">
+            <div class="box box-1">Domov</div>
+            <div class="box box-2">Blog</div>
+            <div class="box box-3">Kontakt</div>
+        </div>
+        
+     
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CVIČENIE 2: Flex Direction -->
+    <!-- ============================================ -->
+    <section class="sekcia">
+        <h2>Cvičenie 2: Rôzne smery usporiadania</h2>
+        <p class="instrukcia">
+            <strong>Cieľ:</strong> Vytvor rôzne typy layoutov - horizontálne menu, vertikálny sidebar a špeciálne usporiadanie.
+        </p>
+        
+        <h3>A) Horizontálne menu (položky v riadku zľava doprava)</h3>
+        <div class="kontajner-2a">
+            <div class="box box-1">Domov</div>
+            <div class="box box-2">Blog</div>
+            <div class="box box-3">Kontakt</div>
+        </div>
+
+        <h3>B) Vertikálny zoznam odkazov (položky pod sebou)</h3>
+        <div class="kontajner-2b">
+            <div class="box box-1">Profil</div>
+            <div class="box box-2">Nastavenia</div>
+            <div class="box box-3">Odhlásiť</div>
+        </div>
+
+        <h3>C) Položky vpravo</h3>
+        <div class="kontajner-2c">
+            <div class="box box-1">Domov</div>
+            <div class="box box-2">Produkty</div>
+            <div class="box box-3">Detail</div>
+        </div>
+        
+        <div class="tip">
+            💡 <strong>flex-direction</strong> určuje HLAVNÚ OS (main axis)
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CVIČENIE 3: Justify Content -->
+    <!-- ============================================ -->
+    <section class="sekcia">
+        <h2>Cvičenie 3: Pozície prvkov vodorovne</h2>
+        <p class="instrukcia">
+            <strong>Cieľ:</strong> Nauč sa umiestňovať prvky na rôzne pozície v kontajneri - vľavo, vpravo, v strede.
+        </p>
+        
+        <h3>A) Logo a menu zarovnané vľavo</h3>
+        <div class="kontajner-3a">
+            <div class="box box-1">Logo</div>
+            <div class="box box-2">O nás</div>
+            <div class="box box-3">Blog</div>
+        </div>
+
+        <h3>B) Tlačidlá zarovnané vpravo (napr. login)</h3>
+        <div class="kontajner-3b">
+            <div class="box box-1">Prihlásiť</div>
+            <div class="box box-2">Registrovať</div>
+            <div class="box box-3">Pomoc</div>
+        </div>
+
+        <h3>C) Obsah vycentrovaný v strede stránky</h3>
+        <div class="kontajner-3c">
+            <div class="box box-1">🏠</div>
+            <div class="box box-2">📧</div>
+            <div class="box box-3">☎️</div>
+        </div>
+
+        <h3>D) Logo vľavo, tlačidlá vpravo (typická hlavička)</h3>
+        <div class="kontajner-3d">
+            <div class="box box-1">Logo</div>
+            <div class="box box-2">Prihlás</div>
+            <div class="box box-3">Kontakt</div>
+        </div>
+
+        <h3>E) Tri tlačidlá s rovnakými medzerami okolo</h3>
+        <div class="kontajner-3e">
+            <div class="box box-1">👈</div>
+            <div class="box box-2">🏠</div>
+            <div class="box box-3">👉</div>
+        </div>
+        
+        <div class="tip">
+            💡 Vodorovná pozícia prvkov - vľavo, vpravo, v strede, rovnomerne rozložené
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CVIČENIE 4: Align Items -->
+    <!-- ============================================ -->
+    <section class="sekcia">
+        <h2>Cvičenie 4: Pozície prvkov zvisle</h2>
+        <p class="instrukcia">
+            <strong>Cieľ:</strong> Nauč sa zarovnávať prvky vo výške - hore, dole, v strede (vertikálne centrovanievanie!).
+        </p>
+        
+        <h3>A) Navigácia zarovnaná nahor</h3>
+        <div class="kontajner-4a">
+            <div class="box box-1">Menu 1</div>
+            <div class="box box-2" style="height: 120px;">Menu 2<br>(vysoké)</div>
+            <div class="box box-3">Menu 3</div>
+        </div>
+
+        <h3>B) Tlačidlá pri spodku bannera</h3>
+        <div class="kontajner-4b">
+            <div class="box box-1">Info</div>
+            <div class="box box-2" style="height: 120px;">Detail</div>
+            <div class="box box-3">Kúpiť</div>
+        </div>
+
+        <h3>C) Tlačidlá vertikálne vycentrované (klasika!)</h3>
+        <div class="kontajner-4c">
+            <div class="box box-1">◀️</div>
+            <div class="box box-2" style="height: 120px;">Obrázok</div>
+            <div class="box box-3">▶️</div>
+        </div>
+
+        <h3>D) Všetky karty rovnako vysoké (roztiahnuté)</h3>
+        <div class="kontajner-4d">
+            <div class="box box-1">Karta 1</div>
+            <div class="box box-2">Karta 2</div>
+            <div class="box box-3">Karta 3</div>
+        </div>
+        
+        <div class="tip">
+            💡 Vertikálna pozícia prvkov - hore, dole, v strede, alebo všetky rovnako vysoké
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CVIČENIE 5: Flex Wrap -->
+    <!-- ============================================ -->
+    <section class="sekcia">
+        <h2>Cvičenie 5: Responzívna galéria</h2>
+        <p class="instrukcia">
+            <strong>Cieľ:</strong> Vytvor galériu produktov, ktorá sa automaticky prispôsobí šírke okna (kľúč k responzívnemu designu!).
+        </p>
+        
+        <h3>A) Všetky produkty v jednom riadku (ak sa nezmestia, pretečú)</h3>
+        <div class="kontajner-5a">
+            <div class="box box-1">📱</div>
+            <div class="box box-2">💻</div>
+            <div class="box box-3">⌚</div>
+            <div class="box box-4">🎧</div>
+            <div class="box box-5">📷</div>
+            <div class="box box-6">🖨️</div>
+        </div>
+
+        <h3>B) Galéria s automatickým zalomením (responzívna!)</h3>
+        <div class="kontajner-5b">
+            <div class="box box-1">📱</div>
+            <div class="box box-2">💻</div>
+            <div class="box box-3">⌚</div>
+            <div class="box box-4">🎧</div>
+            <div class="box box-5">📷</div>
+            <div class="box box-6">🖨️</div>
+        </div>
+        
+        <div class="tip">
+            💡 Skús zmenšiť okno prehliadača - druhá galéria sa automaticky prispôsobí!
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CVIČENIE 6: Gap -->
+    <!-- ============================================ -->
+    <section class="sekcia">
+        <h2>Cvičenie 6: Medzery medzi prvkami</h2>
+        <p class="instrukcia">
+            <strong>Cieľ:</strong> Vytvor galériu kariet produktov s pekným odstupom medzi kartami (profesionálny vzhľad!).
+        </p>
+        
+        <h3>A) Karty produktov bez medzier (dotýkajú sa)</h3>
+        <div class="kontajner-6a">
+            <div class="box box-1">🛍️</div>
+            <div class="box box-2">🎁</div>
+            <div class="box box-3">📦</div>
+            <div class="box box-4">🛒</div>
+        </div>
+
+        <h3>B) Karty s rovnakými medzerami (20px)</h3>
+        <div class="kontajner-6b">
+            <div class="box box-1">🛍️</div>
+            <div class="box box-2">🎁</div>
+            <div class="box box-3">📦</div>
+            <div class="box box-4">🛒</div>
+        </div>
+
+        <h3>C) Galéria s väčším riadkovaním, menšími stĺpcami</h3>
+        <div class="kontajner-6c">
+            <div class="box box-1">🛍️</div>
+            <div class="box box-2">🎁</div>
+            <div class="box box-3">📦</div>
+            <div class="box box-4">🛒</div>
+            <div class="box box-5">🎀</div>
+            <div class="box box-6">📮</div>
+        </div>
+        
+        <div class="tip">
+            💡 Medzery medzi prvkami robia design čitateľnejší a profesionálnejší
+        </div>
+    </section>
+
+    <footer class="paticka">
+        <p>✅ Hotovo! Ovládaš základy moderného layoutu s Flexboxom.</p>
+    </footer>
+
+</body>
+</html>
