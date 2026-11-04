@@ -180,8 +180,8 @@ img {
 ### ✨ Jednotka `fr`
 
 - `1fr 1fr 1fr` = 3 rovnaké stĺpce
+- `repeat(3, 1fr)` = alternatíva k `1fr 1fr 1fr`
 - `1fr 2fr 1fr` = stredný je 2× širší
-- `repeat(3, 1fr)` = skratka za `1fr 1fr 1fr`
 
 ### 🪄 Responzívna galéria bez media queries
 
@@ -195,8 +195,6 @@ img {
 
 - `minmax(250px, 1fr)` – stĺpec má aspoň 250px
 - `auto-fit` – toľko stĺpcov, koľko sa zmestí
-
-⚠️ Na úzkom displeji môže prvok pretiecť. Vtedy použi `minmax(min(250px, 100%), 1fr)`.
 
 ---
 
