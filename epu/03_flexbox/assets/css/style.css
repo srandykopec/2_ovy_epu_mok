@@ -182,7 +182,7 @@ code {
 
 .kontajner-1 {
     /* Ako dať prvky vedľa seba v jednom riadku? */
-    
+    display: flex;
 }
 
 
@@ -193,17 +193,22 @@ code {
 
 .kontajner-2a {
     /* Horizontálne menu - položky v riadku zľava doprava */
+    display: flex;
+    justify-content: flex-start;
     
 }
 
 .kontajner-2b {
     /* Vertikálny zoznam - položky pod sebou */
+    display: flex;
+    flex-direction: column;
     
 }
 
 .kontajner-2c {
     /* Breadcrumbs - položky z pravej strany */
-    
+    display: flex;
+    justify-content: flex-end;
 }
 
 
@@ -214,27 +219,38 @@ code {
 
 .kontajner-3a {
     /* Logo a menu zarovnané vľavo */
-    
+    display: flex;
+    justify-content: flex-start;
 }
 
 .kontajner-3b {
     /* Tlačidlá zarovnané vpravo */
+    display: flex;
+    justify-content: flex-end;
     
 }
 
 .kontajner-3c {
     /* Obsah vycentrovaný v strede */
-    
+    display: flex;
+    justify-content: center;
 }
 
 .kontajner-3d {
     /* Logo vľavo, tlačidlá vpravo (typická hlavička) */
-    
+    display: flex;
+    justify-content: space-between;
 }
 
 .kontajner-3e {
     /* Tri tlačidlá s rovnakými medzerami okolo */
-    
+    display: flex;
+    justify-content: space-around;
+}
+
+.kontajner-3f{
+  display: flex;
+    justify-content: space-evenly;
 }
 
 
@@ -245,22 +261,26 @@ code {
 
 .kontajner-4a {
     /* Navigácia zarovnaná nahor */
-    
+    display: flex;
+
 }
 
 .kontajner-4b {
     /* Tlačidlá pri spodku bannera */
-    
+    display: flex;
+    align-items: flex-end;
 }
 
 .kontajner-4c {
     /* Tlačidlá vertikálne vycentrované (klasika!) */
-    
+    display: flex;
+    align-items: center;
 }
 
 .kontajner-4d {
     /* Všetky karty rovnako vysoké (roztiahnuté) */
-    
+    display: flex;
+    align-items: stretch;
 }
 
 
@@ -271,12 +291,16 @@ code {
 
 .kontajner-5a {
     /* Všetky produkty v jednom riadku (ak sa nezmestia, pretečú) */
+    display: flex;
+
     
 }
 
 .kontajner-5b {
     /* Galéria s automatickým zalomením (responzívna!) */
-    
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 
@@ -287,16 +311,23 @@ code {
 
 .kontajner-6a {
     /* Karty produktov bez medzier */
+    display: flex;
     
 }
 
 .kontajner-6b {
     /* Karty s rovnakými medzerami (20px) */
-    
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .kontajner-6c {
     /* Galéria s väčším riadkovaním, menšími stĺpcami */
-   
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+
     
 }
