@@ -1,0 +1,29 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* height: 100%; */
+}
+
+.containter{
+
+    }
+
+    
+.item1{
+  
+    background-color: #a8333f; 
+}
+.item2{background-color: #5df9fe; }
+.item3{background-color: #f5d06c; }
+.item4{background-color: #6eb0fd; }
+.item5{background-color: #d487f0; }
+.item6{
+    grid-column: 2 / 5;
+    background-color: #51c27b; }
+.item7{background-color: #bd9c71;}
+.item8{background-color: #FFFFBA;}
+.item9{background-color: #CCCCCC; }
+    
