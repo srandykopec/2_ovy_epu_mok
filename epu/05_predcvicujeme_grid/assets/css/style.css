@@ -1,0 +1,211 @@
+/* ============================================================
+   Grid – cvičenia: mobil (do 599 px), tablet (od 600 px), desktop (od 1000 px)
+   Selektory každého cvičenia začínajú #cv1 … #cv5, aby sa nemiešali.
+   ============================================================ */
+
+/* ---------- ZÁKLADNÉ ŠTÝLY (tieto riadky nemeníš) ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
+  padding: 16px;
+  line-height: 1.4;
+}
+.page-title { font-size: 1.5rem; margin-bottom: 8px; }
+.top-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.top-nav a { background: #1d4ed8; color: #fff; text-decoration: none; padding: 4px 12px; border-radius: 999px; font-size: 14px; }
+.cv { border-top: 3px dashed #cbd5e1; margin-top: 40px; padding-top: 24px; }
+.zadanie {
+  background: #fff;
+  border-left: 6px solid #1d4ed8;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+.zadanie summary { font-weight: 700; cursor: pointer; }
+.zadanie h2 { font-size: 1rem; margin-top: 10px; }
+.zadanie ol, .zadanie ul { margin: 6px 0 0 22px; }
+.zadanie li { margin-bottom: 3px; }
+.zadanie code { background: #eef2ff; padding: 1px 5px; border-radius: 4px; }
+.zadanie pre { background: #111827; color: #e5e7eb; padding: 10px; border-radius: 6px; overflow-x: auto; font-size: 12px; line-height: 1.35; margin-top: 8px; }
+.zadanie .bonus { color: #92400e; }
+/* Štítok s aktuálnym zariadením (vpravo dole) */
+body::after {
+  content: "MOBIL";
+  position: fixed; right: 8px; bottom: 8px; z-index: 10;
+  background: #111827; color: #fff;
+  padding: 4px 12px; border-radius: 999px;
+  font-size: 12px; font-weight: 700;
+}
+@media (min-width: 600px)  { body::after { content: "TABLET"; } }
+@media (min-width: 1000px) { body::after { content: "DESKTOP"; } }
+
+/* Vzhľad boxov (cvičenia 1 – 3) */
+.box {
+  display: grid; place-items: center;
+  min-height: 70px; padding: 12px;
+  border-radius: 8px;
+  background: #3b82f6; color: #fff; font-weight: 700; text-align: center;
+}
+.box:nth-child(6n+2) { background: #10b981; }
+.box:nth-child(6n+3) { background: #f59e0b; }
+.box:nth-child(6n+4) { background: #ef4444; }
+.box:nth-child(6n+5) { background: #8b5cf6; }
+.box:nth-child(6n+6) { background: #ec4899; }
+
+/* Vzhľad častí stránky (cvičenie 4) */
+.layout > * { padding: 16px; border-radius: 8px; color: #fff; font-weight: 700; }
+.layout .header { background: #1d4ed8; }
+.layout .nav    { background: #10b981; }
+.layout .main   { background: #f59e0b; min-height: 140px; }
+.layout .aside  { background: #8b5cf6; }
+.layout .footer { background: #374151; }
+.layout .footer div { background: rgba(255, 255, 255, .18); padding: 8px; border-radius: 6px; }
+
+/* Vzhľad widgetov (cvičenie 5) */
+.dashboard > * {
+  display: grid; place-items: center;
+  padding: 16px; border-radius: 8px;
+  color: #fff; font-weight: 700; min-height: 90px;
+}
+.dashboard .header { background: #1d4ed8; }
+.dashboard .stat-a { background: #10b981; }
+.dashboard .stat-b { background: #f59e0b; }
+.dashboard .stat-c { background: #ef4444; }
+.dashboard .chart  { background: #8b5cf6; min-height: 160px; }
+.dashboard .list   { background: #ec4899; }
+.dashboard .footer { background: #374151; }
+
+/* ============================================================
+   CVIČENIE 1: Stĺpce a jednotka fr
+   ============================================================ */
+/* ÚLOHA 1 – mobil (základ)
+   Hint: display, gap, grid-template-columns */
+#cv1 .grid {
+
+}
+
+/* ÚLOHA 2 – tablet */
+@media (min-width: 600px) {
+  #cv1 .grid {
+
+  }
+}
+
+/* ÚLOHA 3 – desktop */
+@media (min-width: 1000px) {
+  #cv1 .grid {
+
+  }
+}
+
+/* ⭐ BONUS – dopíš do desktop media query vyššie */
+
+/* ============================================================
+   CVIČENIE 2: Span cez stĺpce
+   ============================================================ */
+/* Mriežka je hotová – stĺpce už nastavovať nemusíš */
+#cv2 .grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 600px)  { #cv2 .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { #cv2 .grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* ÚLOHA 1 + 2 – od tabletu
+   Hint: .full → grid-column: 1 / -1;   .wide → grid-column: span 2; */
+@media (min-width: 600px) {
+
+}
+
+/* ÚLOHA 3 – desktop: otestuj bez kódu a zisti, prečo .wide funguje */
+
+/* ⭐ BONUS – len desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* ============================================================
+   CVIČENIE 3: Span cez riadky: bento rozloženie
+   ============================================================ */
+#cv3 .box { min-height: 0; }   /* výšku riadkov určuje grid-auto-rows */
+/* Stĺpce sú hotové (mobil 1, tablet 2, desktop 4) */
+#cv3 .grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  /* ÚLOHA 1 – mobil: grid-auto-rows */
+}
+@media (min-width: 600px) {
+  #cv3 .grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* ÚLOHA 1 – tablet: grid-auto-rows */
+  }
+  /* ÚLOHA 2 – .big cez 2 stĺpce */
+}
+@media (min-width: 1000px) {
+  #cv3 .grid {
+    grid-template-columns: repeat(4, 1fr);
+    /* ÚLOHA 1 – desktop: grid-auto-rows */
+  }
+  /* ÚLOHA 3 – .big: 2 stĺpce a 2 riadky */
+
+  /* ÚLOHA 4 – .wide a .tall */
+
+}
+
+/* ⭐ BONUS – grid-auto-flow: dense (pridaj do .grid) */
+
+/* ============================================================
+   CVIČENIE 4: Rozloženie stránky cez grid-template-areas
+   ============================================================ */
+/* ÚLOHA 1 – prideľ názvy oblastí (platí pre všetky zariadenia) */
+#cv4 .header { /* grid-area: header; */ }
+#cv4 .nav    { }
+#cv4 .main   { }
+#cv4 .aside  { }
+#cv4 .footer { }
+
+/* ÚLOHA 1 + 2 – mobil: .layout = grid, gap, grid-template-areas (5 riadkov) */
+#cv4 .layout {
+
+}
+
+/* ÚLOHA 3 – tablet: 2 stĺpce, nové areas */
+@media (min-width: 600px) {
+  #cv4 .layout {
+
+  }
+}
+
+/* ÚLOHA 4 – desktop: 3 stĺpce, nové areas */
+@media (min-width: 1000px) {
+  #cv4 .layout {
+
+  }
+}
+
+/* ⭐ BONUS – footer ako grid (od tabletu) a footer dole (desktop) */
+
+/* ============================================================
+   CVIČENIE 5: Výzva: dashboard
+   ============================================================ */
+/* Tu píšeš všetko sám.
+   Postup: 1) mobil   2) @media (min-width: 600px)   3) @media (min-width: 1000px)
+   Nezabudni: každému widgetu treba prideliť grid-area, ak používaš areas. */
+
+#cv5 .dashboard {
+
+}
+
+@media (min-width: 600px) {
+
+}
+
+@media (min-width: 1000px) {
+
+}

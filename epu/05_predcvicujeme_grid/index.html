@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid – cvičenia (mobil, tablet, desktop)</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <h1 class="page-title">Grid – cvičenia (mobil, tablet, desktop)</h1>
+  <nav class="top-nav">
+    <a href="#cv1">Cvičenie 1</a>
+    <a href="#cv2">Cvičenie 2</a>
+    <a href="#cv3">Cvičenie 3</a>
+    <a href="#cv4">Cvičenie 4</a>
+    <a href="#cv5">Cvičenie 5</a>
+  </nav>
+
+  <section class="cv" id="cv1">
+    <details class="zadanie" open>
+      <summary>Cvičenie 1: Stĺpce a jednotka fr</summary>
+      <p>Máš deväť boxov. Rozlož ich do stĺpcov tak, aby sa rozloženie menilo podľa zariadenia.</p>
+      <h2>Úlohy</h2>
+      <ol>
+        <li>Mobil (základ): <code>display: grid</code>, <code>gap: 16px</code> a jeden stĺpec (<code>1fr</code>).</li>
+        <li>Tablet: dva rovnaké stĺpce.</li>
+        <li>Desktop: tri rovnaké stĺpce.</li>
+      </ol>
+      <h2 class="bonus">⭐ Bonus pre rýchlejších</h2>
+      <ul class="bonus">
+        <li>Na desktope daj štyri stĺpce so šírkami <code>200px 1fr 2fr 1fr</code>. Skús aj <code>repeat()</code>.</li>
+        <li>Nahraď <code>gap</code> samostatnými <code>row-gap: 24px</code> a <code>column-gap: 12px</code>.</li>
+      </ul>
+      <p style="margin-top:8px">Píš do <code>assets/css/style.css</code>, do časti <b>CVIČENIE 1</b>. Selektory začínajú <code>#cv1</code>, aby sa cvičenia navzájom nemiešali.</p>
+    </details>
+    <div class="grid">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    </div>
+  </section>
+
+  <section class="cv" id="cv2">
+    <details class="zadanie" open>
+      <summary>Cvičenie 2: Span cez stĺpce</summary>
+      <p>Mriežka už má stĺpce (1 / 2 / 4). Tvojou úlohou je roztiahnuť vybrané boxy cez viac stĺpcov.</p>
+      <h2>Úlohy</h2>
+      <ol>
+        <li>Od tabletu: box <code>.full</code> na celú šírku (<code>grid-column: 1 / -1</code>).</li>
+        <li>Od tabletu: box <code>.wide</code> cez dva stĺpce (<code>grid-column: span 2</code>).</li>
+        <li>Skontroluj desktop. Funguje <code>.wide</code> aj bez ďalšieho kódu? Prečo?</li>
+      </ol>
+      <h2 class="bonus">⭐ Bonus pre rýchlejších</h2>
+      <ul class="bonus">
+        <li>Len na desktope: box <code>.mid</code> od čiary 2 po čiaru 4 (<code>grid-column: 2 / 4</code>).</li>
+        <li>Len na desktope: box <code>.end</code> do posledných dvoch stĺpcov (<code>grid-column: -3 / -1</code>).</li>
+      </ul>
+      <p style="margin-top:8px">Píš do <code>assets/css/style.css</code>, do časti <b>CVIČENIE 2</b>. Selektory začínajú <code>#cv2</code>, aby sa cvičenia navzájom nemiešali.</p>
+    </details>
+    <div class="grid">
+    <div class="box full">1 · full</div>
+    <div class="box wide">2 · wide</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box mid">6 · mid</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box end">10 · end</div>
+    </div>
+  </section>
+
+  <section class="cv" id="cv3">
+    <details class="zadanie" open>
+      <summary>Cvičenie 3: Span cez riadky: bento rozloženie</summary>
+      <p>Dlaždice majú rôznu veľkosť: niektoré sú cez viac stĺpcov, iné cez viac riadkov. Výška riadkov sa nastavuje cez <code>grid-auto-rows</code>.</p>
+      <h2>Úlohy</h2>
+      <ol>
+        <li>Mobil: <code>grid-auto-rows: 100px</code>. Tablet: <code>120px</code>. Desktop: <code>140px</code>.</li>
+        <li>Tablet: <code>.big</code> cez dva stĺpce (<code>grid-column: span 2</code>).</li>
+        <li>Desktop: <code>.big</code> cez 2 stĺpce a 2 riadky (<code>grid-row: span 2</code>).</li>
+        <li>Desktop: <code>.wide</code> cez 2 stĺpce a <code>.tall</code> cez 2 riadky.</li>
+        <li>Pozri sa na desktop: vidíš prázdnu dieru? Pozri sa vpravo hore.</li>
+      </ol>
+      <h2 class="bonus">⭐ Bonus pre rýchlejších</h2>
+      <ul class="bonus">
+        <li>Oprav dieru jedným riadkom na <code>.grid</code>: <code>grid-auto-flow: dense</code>. Čo sa stalo s poradím dlaždíc?</li>
+        <li>Pridaj do HTML ôsmu dlaždicu s vlastnou triedou a daj jej <code>grid-column: span 2</code> aj <code>grid-row: span 2</code>.</li>
+      </ul>
+      <p style="margin-top:8px">Píš do <code>assets/css/style.css</code>, do časti <b>CVIČENIE 3</b>. Selektory začínajú <code>#cv3</code>, aby sa cvičenia navzájom nemiešali.</p>
+    </details>
+    <div class="grid">
+    <div class="box big">1 · big</div>
+    <div class="box">2</div>
+    <div class="box wide">3 · wide</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box tall">6 · tall</div>
+    <div class="box">7</div>
+    </div>
+  </section>
+
+  <section class="cv" id="cv4">
+    <details class="zadanie" open>
+      <summary>Cvičenie 4: Rozloženie stránky cez grid-template-areas</summary>
+      <p>Klasická stránka: header, navigácia, obsah, bočný panel a footer. Každej časti pridelíš názov a potom ich ukladáš do „plánu“.</p>
+      <h2>Úlohy</h2>
+      <ol>
+        <li>Každej časti daj <code>grid-area</code> (<code>header</code>, <code>nav</code>, <code>main</code>, <code>aside</code>, <code>footer</code>) a <code>.layout</code> daj <code>display: grid</code> a <code>gap</code>.</li>
+        <li>Mobil: všetko pod sebou. Do <code>grid-template-areas</code> napíš päť riadkov s jedným názvom.</li>
+        <li>Tablet: stĺpce <code>200px 1fr</code>. Header hore na celú šírku, pod ním navigácia vľavo a obsah vpravo, potom aside na celú šírku a footer.</li>
+        <li>Desktop: stĺpce <code>220px 1fr 200px</code>. Header hore, v strede nav + main + aside vedľa seba, dole footer.</li>
+      </ol>
+      <h2 class="bonus">⭐ Bonus pre rýchlejších</h2>
+      <ul class="bonus">
+        <li>Od tabletu rozdeľ <code>.footer</code> na dva stĺpce (<code>.footer</code> bude vlastný grid).</li>
+        <li>Na desktope nastav <code>.layout</code> <code>min-height: 80vh</code> a <code>grid-template-rows: auto 1fr auto</code>, aby bol footer vždy dole.</li>
+      </ul>
+      <p style="margin-top:8px">Píš do <code>assets/css/style.css</code>, do časti <b>CVIČENIE 4</b>. Selektory začínajú <code>#cv4</code>, aby sa cvičenia navzájom nemiešali.</p>
+    </details>
+    <div class="layout">
+      <header class="header">Header</header>
+      <nav class="nav">Navigácia</nav>
+      <main class="main">Hlavný obsah</main>
+      <aside class="aside">Bočný panel</aside>
+      <footer class="footer">
+        <div>Kontakt</div>
+        <div>Odkazy</div>
+      </footer>
+    </div>
+  </section>
+
+  <section class="cv" id="cv5">
+    <details class="zadanie" open>
+      <summary>Cvičenie 5: Výzva: dashboard</summary>
+      <p>Záverečná výzva. HTML je hotové a CSS píšeš sám. Podľa náčrtov poskladaj rozloženie pre všetky tri zariadenia. Môžeš použiť <code>grid-template-areas</code> aj <code>span</code>.</p>
+      <h2>Úlohy</h2>
+      <ol>
+        <li>Mobil: jeden stĺpec, widgety pod sebou v poradí podľa náčrtu.</li>
+        <li>Tablet: dva stĺpce podľa náčrtu (graf cez celú šírku).</li>
+        <li>Desktop: štyri stĺpce podľa náčrtu (<code>list</code> cez 2 riadky, <code>chart</code> cez 3 stĺpce).</li>
+        <pre>MOBIL          TABLET              DESKTOP
+[header]        [header     ]       [header                 ]
+[stat-a]        [stat-a][stat-b]    [stat-a][stat-b][stat-c][list]
+[stat-b]        [chart      ]       [chart         ][list]
+[stat-c]        [stat-c][list]      [footer                 ]
+[chart]         [footer     ]
+[list]
+[footer]</pre>
+      </ol>
+      <h2 class="bonus">⭐ Bonus pre rýchlejších</h2>
+      <ul class="bonus">
+        <li>Na mobile zobraz <code>chart</code> hneď pod headerom. HTML nesmieš meniť (pomôžu <code>grid-template-areas</code>).</li>
+        <li>Pridaj ôsmy widget <code>.notes</code> a vymysli vlastné rozloženie pre desktop bez prázdnych miest.</li>
+      </ul>
+      <p style="margin-top:8px">Píš do <code>assets/css/style.css</code>, do časti <b>CVIČENIE 5</b>. Selektory začínajú <code>#cv5</code>, aby sa cvičenia navzájom nemiešali.</p>
+    </details>
+    <div class="dashboard">
+      <header class="header">Dashboard</header>
+      <section class="stat-a">Návštevy</section>
+      <section class="stat-b">Objednávky</section>
+      <section class="stat-c">Tržby</section>
+      <section class="chart">Graf</section>
+      <section class="list">Zoznam</section>
+      <footer class="footer">Footer</footer>
+    </div>
+  </section>
+
+</body>
+</html>
